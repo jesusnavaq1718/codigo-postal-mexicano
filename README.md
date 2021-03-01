@@ -1,29 +1,26 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+El sistema esta conectado al servicio postal mexicano, cada que se consulte un cp, seran persistidos los datos y se guardaran en nuetra base de datos local, esto pensado para una v2 , donde se realizaria la consulta en la db si es que llegara a fallar la pagina oficial de servicio postal mexicano.
 
-### What is this repository for? ###
+Este sistema funciona con una base de datos en MySQL con los siguientes parametros:
+password: zip_code
+username: root
+url: jdbc:mysql://localhost:3306/codigos_postales?useSSL=false&serverTimezone=America/Mexico_City&useLegacyDatetimeCode=false
+nombre de la bs: codigos_postales
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+Con la direccion local:
+http://localhost:8080/zip-codes/50780
 
-### How do I get set up? ###
+Tambien integracion de swangger para mejor integracion y control:
+http://localhost:8080/swagger-ui.html
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
 
-### Contribution guidelines ###
+Las vesiones para el entorno de desarrollo son:
+Apache Maven 3.6.3
+git version 2.25.1
+java version "1.8.0_281"
+Spring tools suite 4
 
-* Writing tests
-* Code review
-* Other guidelines
 
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+archivo en git:
+git clone https://jesusnava@bitbucket.org/jesusnava/apicodigopostal.git
